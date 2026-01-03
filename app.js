@@ -110,7 +110,7 @@ const promptLabel = document.getElementById('promptLabel');
 const state = {
   history: [],
   historyIndex: -1,
-  theme: localStorage.getItem('portfolio-theme') || 'matrix',
+  theme: localStorage.getItem('portfolio-theme') || 'dark',
   typingEffect: false,
   prompt: profile.meta.prompt || 'user@host:~$'
 };
