@@ -9,10 +9,12 @@
 <body>
   <main class="page">
     <section class="terminal" aria-label="Terminal portfolio">
-      <div class="terminal__screen" id="output" role="log" aria-live="polite"></div>
-      <div class="terminal__input">
-        <span class="prompt" aria-hidden="true" id="promptLabel">user@host:~$</span>
-        <input id="terminalInput" type="text" aria-label="Terminal input" autocomplete="off" spellcheck="false">
+      <div class="terminal__screen" id="terminalScreen" role="log" aria-live="polite">
+        <div id="output"></div>
+        <div class="terminal__input">
+          <span class="prompt" aria-hidden="true" id="promptLabel">user@host:~$</span>
+          <input id="terminalInput" type="text" aria-label="Terminal input" autocomplete="off" spellcheck="false">
+        </div>
       </div>
     </section>
   </main>

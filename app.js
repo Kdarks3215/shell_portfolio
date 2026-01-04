@@ -84,8 +84,9 @@ const profile = {
   certs: ['KCNA', 'AWS CCP', 'AWS CSA'],
   contact: {
     email: 'kdarkolarbi@gmail.com',
-    github: 'https://github.com/kdarko',
-    linkedin: 'https://linkedin.com/in/darko-david-larbi',
+    github: 'https://github.com/Kdarks3215',
+    linkedin: 'https://www.linkedin.com/in/kdarkolarbi',
+    website: 'https://kdlabs.cloud',
     resume: 'https://example.dev/resume.pdf'
   },
   meta: {
@@ -104,6 +105,7 @@ const aliasMap = {
 
 const commandHandlers = {};
 const outputEl = document.getElementById('output');
+const screenEl = document.getElementById('terminalScreen');
 const inputEl = document.getElementById('terminalInput');
 const promptLabel = document.getElementById('promptLabel');
 
@@ -250,6 +252,8 @@ function renderContact() {
   fragment.appendChild(makeLink('GitHub', profile.contact.github));
   fragment.appendChild(document.createTextNode(' '));
   fragment.appendChild(makeLink('LinkedIn', profile.contact.linkedin));
+  fragment.appendChild(document.createTextNode(' '));
+  fragment.appendChild(makeLink('Website', profile.contact.website));
   addOutput([{ text: 'Contact:', className: 'ansi-info' }, { element: fragment }]);
 }
 
@@ -288,7 +292,7 @@ function addOutput(lines) {
       appendText(entry.text, entry.className);
     }
   });
-  outputEl.scrollTop = outputEl.scrollHeight;
+  screenEl.scrollTop = screenEl.scrollHeight;
 }
 
 function appendElement(element) {
